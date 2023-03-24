@@ -74,7 +74,9 @@ docker swarm init --advertise-addr <pc-1 ip address>docker swarm join-token mana
 **从主机1，**
 
 ```
-docker network create --attachable --driver overlay basic-network docker network ls
+docker network create --attachable --driver overlay fabric-network_test 
+docker network ls
+
 ```
 
 **从主机2，**
@@ -103,7 +105,8 @@ docker network ls
 
 ```
 # from PC -1,
-docker-compose -f pc1.yaml up -d# from PC -2,
+docker-compose -f pc1.yaml up -d
+# from PC -2,
 docker-compose -f pc2.yaml up -d
 ```
 
